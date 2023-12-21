@@ -1,29 +1,5 @@
-<!DOCTYPE html>
 <html>
 <body>
-
-<iframe id="myIframe" src="intent://scrambly.io/#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=https://scrambly.io;end"></iframe>
-
-<script>
-// Function to get a specific query parameter value from the URL
-function getQueryParam(param) {
-    var urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
-}
-
-// Get the Facebook Click ID (fbclid) from the URL
-var fbClickId = getQueryParam('fbclid');
-
-// Check if the fbclid is present and append it to the URL
-if (fbClickId) {
-    // Get the iframe element
-    var myIframe = document.getElementById('myIframe');
-    // Construct the new URL with fbclid
-    var newUrl = "intent://scrambly.io/?utm_source=facebook&utm_medium=cpc&utm_content=git&fbclid=" + fbClickId + "#Intent;scheme=http;package=com.android.chrome;S.browser_fallback_url=https://scrambly.io;end";
-    // Update the iframe's src attribute
-    myIframe.src = newUrl;
-}
-</script>
-
+<iframe src="intent://scrambly.io/?utm_source=facebook&utm_medium=cpc&utm_content=git#Intent;scheme=http;package=com.android.chrome;end"></iframe>
 </body>
 </html>
